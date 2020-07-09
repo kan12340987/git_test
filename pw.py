@@ -1,7 +1,8 @@
 #! python3
 #pw.py - An insecure password locker program
 
-password = PASSWORDS = {'email': 'F7minlBDDuvMJuxESSKHFhTxFtjVB6',
+#Add password to the dictionary when needs to be updated.
+password = {'email': 'F7minlBDDuvMJuxESSKHFhTxFtjVB6',
 'blog': 'VmALvQyKAxiVH5G8v01if1MLZF3sdt',
 'luggage': '12345'}
 
@@ -14,6 +15,6 @@ account=sys.argv[1]
 
 if account in password:
     pyperclip.copy(password[account])
-    print('Password for' + account + 'copied to clipboard.')
+    print('Password for ' + account + ' copied to clipboard.')
 else:
     print('the account does not exist'+ account)
